@@ -1,23 +1,20 @@
+const dictionary = {
+  "I": "je",
+  "you": "ty",
+  "he": "ón",
+  "she": "éna",
+  "it": "tas",
+  "we": "vén",
+  "they": "óni",
+  "eat": "jeda",
+  "water": "vadra",
+  "bread": "páne"
+};
+
 function translate() {
-  const dict = {
-    "i": "Je",
-    "i am": "Je zar"
-    "I": "Je",
-    "I am": "Je zar"
-    "you": "ty",
-    "he": "ón",
-    "she": "éna",
-    "it": "tas",
-    "we": "vén",
-    "they": "óni",
-    "eat": "jeda",
-    "bread": "páne",
-    "water": "vadra",
-    "and": "i"
-  };
-  let input = document.getElementById("input").value.toLowerCase();
-  let words = input.split(/\s+/);
-  let output = words.map(w => dict[w] || `[${w}]`).join(" ");
-  document.getElementById("output").value = output;
+  const input = document.getElementById("input").value.toLowerCase();
+  const words = input.split(/\s+/);
+  const translated = words.map(word => dictionary[word] || word);
+  document.getElementById("output").innerText = translated.join(" ");
 }
 
