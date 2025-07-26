@@ -1,6 +1,9 @@
 function translate() {
   const dict = {
-    "i": "je",
+    "i": "Je",
+    "i am": "Je zar"
+    "I": "Je",
+    "I am": "Je zar"
     "you": "ty",
     "he": "ón",
     "she": "éna",
@@ -10,7 +13,7 @@ function translate() {
     "eat": "jeda",
     "bread": "páne",
     "water": "vadra",
-    "and": "I"
+    "and": "i"
   };
   let input = document.getElementById("input").value.toLowerCase();
   let words = input.split(/\s+/);
