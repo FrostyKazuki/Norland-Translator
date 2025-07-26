@@ -1,5 +1,5 @@
 const dictionary = {
-  "I": "je",
+  "i": "je",
   "you": "ty",
   "he": "ón",
   "she": "éna",
@@ -7,14 +7,14 @@ const dictionary = {
   "we": "vén",
   "they": "óni",
   "eat": "jeda",
-  "water": "vadra",
-  "bread": "páne"
+  "bread": "páne",
+  "water": "vadra"
 };
 
 function translate() {
-  const input = document.getElementById("input").value.toLowerCase();
-  const words = input.split(/\s+/);
-  const translated = words.map(word => dictionary[word] || word);
-  document.getElementById("output").innerText = translated.join(" ");
+  const inputText = document.getElementById("input").value.toLowerCase();
+  const words = inputText.split(/\s+/);
+  const translatedWords = words.map(word => dictionary[word] || word);
+  const output = translatedWords.join(" ");
+  document.getElementById("output").value = output;
 }
-
